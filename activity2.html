@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Activity 2</title>
+    </head>
+    <body>
+        <h2>API Validation</h2>
+        <input type="number" id="ip" min="100" max="300" required>
+        <p id="p1">Please enter a number within a range of 100-300</p>
+        <button onclick="validate()">Ok</button>
+        <p id="p2"></p>
+        <script>
+            function validate(){
+                inp=document.getElementById("ip");
+                if(!inp.checkValidity()){
+                    document.getElementById("p2").innerHTML=inp.validationMessage;
+                }
+                else{
+                    document.getElementById("p2").innerHTML="Input Ok";
+                }
+            }
+        </script>
+    </body>
+</html>
